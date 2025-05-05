@@ -6,6 +6,7 @@ import MainLine from "./Components/MainLine"
 import ProjectContainer from "./Components/ProjectContainer"
 import MainVerticleLine from "./Components/MainVerticleLine"
 import Testimonial from "./Components/Testimonial"
+import ContactUs from "./Components/ContactUs"
 import Footer from "./Components/Footer"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <ProjectContainer />
       <MainVerticleLine />
       <Testimonial />
+      <ContactUs  />
       <Footer /> 
       </main>
     </>
