@@ -94,7 +94,78 @@ export default function Header() {
                 MERN Stack Developer
               </p>
               <div className=" flex justify-between gap-4  max-w-6xl mt-20 sm:mt-16 md:mt-10">
-               
+                <button
+                  onClick={toggleDialog}
+                  className=" pointer-events-auto cursor-pointer  text[16px] lg:text-[18px] py-[6px] px-3 sm:px-4 relative rounded  font-bold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] hover:from-[#1f2667e6] hover:to-[#1595b6] hover:scale-105 ease-in-out group duration-100 font-['Nunito']"
+                >
+                  About Me
+                  <Arrow className="hidden sm:block absolute top-1/2 -translate-y-1/2 -right-7 group-hover:-right-9 ease-in-out duration-100" />
+                </button>
+
+                <ChakraProvider
+                  theme={theme}
+                  resetCSS={false}
+                  resetScope=".chakra-reset"
+                >
+                  <div className="chakra-reset">
+                    <ColorModeScript
+                      initialColorMode={theme.config.initialColorMode}
+                    />
+                    <Popover placement="left" isLazy>
+                      <PopoverTrigger>
+                        <Button
+                          style={{ fontWeight: "bold !important" }}
+                          className=" pointer-events-auto cursor-pointer rounded relative hover:scale-105 ease-in-out duration-200 group font-['Nunito'] mr-20 lg:mr-24"
+                          bgGradient="linear(to-l, #1595b6, #1f2667e6)"
+                          _hover={{
+                            bgGradient: "linear(to-r, #1595b6, #1f2667e6)",
+                          }}
+                          color={"white"}
+                          fontWeight="bold"
+                          size={"lg"}
+                          pl={2}
+                          pr={4}
+                          textAlign={"center"}
+                          leftIcon={
+                            <Arrow className="hidden sm:block rotate-180 absolute top-1/2 -translate-y-1/2 -left-7 group-hover:-left-9 ease-in-out duration-200" />
+                          }
+                        >
+                          My Resume
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent
+                        focus={{ boxShadow: "dark-lg" }}
+                        mr={{ base: -20, sm: -20, md: 3 }}
+                        mb={10}
+                        bg="#1f2f6d" // Dark background
+                        color="#e5e0e0" // White text
+                      >
+                        <PopoverCloseButton className="pointer-events-auto cursor-pointer" />
+                        <PopoverHeader fontWeight="bold">
+                          My Resume(Click on image to open)
+                        </PopoverHeader>
+                        <PopoverBody>
+                          <Image
+                            className="pointer-events-auto cursor-pointer"
+                            alt={"Hero Image"}
+                            fit={"cover"}
+                            align={"center"}
+                            w={"100%"}
+                            h={"100%"}
+                            src={resume}
+                            onClick={() => {
+                              window.open(
+                                "https://drive.google.com/file/d/1D2gsimV47zEsubjK2urHGWpY_h-iLyBB/view",
+                                "_blank"
+                              );
+                            }}
+                          />
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  </div>
+                </ChakraProvider>
+
               </div>
             </div>
           </div>
