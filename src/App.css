@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Nunito:wght@300;400;600;700;800;900&family=Russo+One&family=Spartan:wght@700;800;900&display=swap");
+
+
+/* Testimonial Swiper CSS */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+}
+
+
+
+/* Projects-Card button CSS */
+.btn {
+  color: #fff;
+  background-image: linear-gradient(
+    90deg,
+    #3e56a7,
+    #04acff,
+    #eaaaaa,
+    #e11adc,
+    #a0a00f,
+    #3e56a7,
+    #14accc
+  );
+  background-size: 400%;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease 0s;
+}
+.btn:focus,
+.btn:hover {
+  color: #fff;
+  text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
+  animation: animate 3s ease-out infinite;
+}
+.btn:before {
+  content: "";
+  background: #0c1838;
+  border-radius: 50px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: -1;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+    box-shadow: 0 0 0.6em #1595b6;
+  }
+  50% {
+    background-position: 60%;
+    box-shadow: 0 0 0.6em #1f2667e6;
+  }
+  100% {
+    background-position: 100%;
+    box-shadow: 0 0 0.6em #3e56a7;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .btn {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .copywrite {
+    font-size: 13px;
+  }
+}
+
+
+/* About Me CSS */
+.about-section {
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  background: #1f2f6d;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  pointer-events: none;
+  transform: translate(-50%, -45%) scale(0);
+  overflow: hidden;
+  z-index: 1000;
+  transition: left 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.about-me-text ul li {
+  list-style: none;
+  border: 1px solid #444;
+  border-radius: 50px;
+  background-color: #080d27;
+}
+
+.about-section.active {
+  transform: translate(-50%, -50%) scale(1);
+  left: 50%;
+  pointer-events: all;
+}
