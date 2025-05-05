@@ -4,6 +4,8 @@ import HeaderLine from "./Components/HeaderLine";
 import SkillsSection from "./Components/SkillsSection"
 import MainLine from "./Components/MainLine"
 import ProjectContainer from "./Components/ProjectContainer"
+import MainVerticleLine from "./Components/MainVerticleLine"
+
 function App() {
   return (
     <>
@@ -13,6 +15,7 @@ function App() {
       <SkillsSection />
       <MainLine />
       <ProjectContainer />
+      <MainVerticleLine />
       </main>
     </>
   );
