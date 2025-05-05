@@ -5,6 +5,8 @@ import SkillsSection from "./Components/SkillsSection"
 import MainLine from "./Components/MainLine"
 import ProjectContainer from "./Components/ProjectContainer"
 import MainVerticleLine from "./Components/MainVerticleLine"
+import Testimonial from "./Components/Testimonial"
+import Footer from "./Components/Footer"
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <MainLine />
       <ProjectContainer />
       <MainVerticleLine />
+      <Testimonial />
+      <Footer /> 
       </main>
     </>
   );
