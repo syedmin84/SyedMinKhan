@@ -16,7 +16,7 @@ This is my personal portfolio website showcasing my skills, projects, and contac
 - Smooth animations
 
 
-## 🔧 Installation (if code setup needed)
+## 🔧 Installation
 
 ```bash
 git clone https://github.com/syedmin84/Syedminkhan.git
